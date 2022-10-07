@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS `hospital`
+
+USE `hospital`;
+
+CREATE TABLE `hospital_pacients` (
+  `idnumber` int(11) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `dob` int(11) NOT NULL,
+  `ward` varchar(255) NULL,
+  `records` varchar(255) NOT NULL,
+  PRIMARY KEY (`idnumber`)
+);
+
+INSERT INTO `hospital_pacients` VALUES (0505072579,'Lukas','Hynek', 050507, "[{'ward': 'Pediatrie', 'doctor': 'Jan Makak'}]", "{'zlomena ruka'}");
+INSERT INTO `hospital_pacients` VALUES (0406055253,'Ben','Mekunni', 040605, "[{'ward': 'Chirurgie', 'doctor': 'Denis Makak'}]", "{'vykloubeny hlava'}");
